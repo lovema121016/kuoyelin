@@ -1,0 +1,13 @@
+<!-- 查看历史结果页面 -->
+<!-- 显示该套题图片 -->
+<view class="totle" style="background-image: url('http://localhost:8080/kuoyelin/img/back8.jpg')">
+ <!-- 显示题目标题 -->   
+            <view class="kuangjia">
+              {{lishitimu}}
+           </view>
+<!-- 显示测试结果 -->         
+            <view  class="kuangjia" bindtap='judge_jieguo' data-postjieguo="{{test.panduan}}">
+             {{lishijieguo}}
+            </view> 
+   
+</view>

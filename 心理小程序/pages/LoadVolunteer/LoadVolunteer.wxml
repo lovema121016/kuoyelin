@@ -1,0 +1,20 @@
+<block wx:for="{{volunteer_all}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+  <block wx:for="{{test.volunteer_all}}" wx:for-item="text" wx:key="this" wx:for-index="i">
+  
+      <view style='margin-top:6px'>
+        <text decode="{{true}}"> 
+        </text>
+      </view>
+      <view class="kuangjia">
+        <view class="title1">
+
+          在线时间：{{text.volunteer_work_time_begin}}-{{text.volunteer_work_time_end}}</view>
+        <view class="title1">
+          联系方式：{{text.volunteer_phone}}</view>
+        <view style='color:gray;margin-top:-25px;font-size:11px;float:right;margin-right:4px'>
+          领域：{{text.volunteer_good_type}}</view>
+        <image style='margin-top:-5px;width:20%;height:60px;float:right;border-radius:10px' src="https://www.kuoyelindc.com/kuoyelin/img/{{text.volunteer_work_image}}"></image>
+      </view>
+   
+  </block>
+</block>

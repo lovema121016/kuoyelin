@@ -1,0 +1,106 @@
+.search-button {
+  border-left: 0 !important;
+  border-top: 1px solid #fff !important;
+  border-right: 1px solid #fff !important;
+  border-bottom: 1px solid #fff !important;
+  background-color: #fff !important;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: #296fd0 !important;
+  width: 20%;
+  margin: 0 !important;
+  box-shadow: 1px 1px 6px #ecf0f0;
+}
+
+.search-button icon {
+  position: absolute;
+  margin: 28rpx 16rpx;
+}
+
+.search-input {
+  background-color: #fff;
+  padding: 16rpx 0 16rpx 32rpx;
+  min-height: 1rem;
+  font-size: 35rpx;
+  /*  position: absolute;*/
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  /* border: 1px solid #ededed;  */
+  border-right: 0 !important;
+  height: 48rpx;
+  width: 80%;
+  text-align: left;
+  box-shadow: 1px 1px 6px #ecf0f0;
+}
+
+.share-button {
+  border: 1px solid #eee !important;
+  color: #296fd0 !important;
+  left: 10rpx;
+  height: 100rpx;
+  width: 200rpx;
+}
+
+.search-pancel {
+  display: flex;
+  flex-direction: row;
+  background-color: #f5f7f7;
+  margin-top:6px;
+}
+
+.search-pancel image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+.title1{
+font-size: 40rpx;
+font-family: NSimSun;
+font-weight:bold;
+color: #3a4040;
+float:left;
+margin-top:20px;
+width:75%;
+margin-left:10px
+}
+.type1{
+  font-size:11px;
+  float:right;
+  color:gray;
+  margin-top:4px;
+  margin-right:4px
+}
+.image1{
+  width:20%;
+  height:60px;
+  float:right;
+  border-radius:10px;
+}
+.kuangjia{
+  height:90px;
+  margin-top:5px;
+  width:98%;
+  background-color:white;
+  border-radius:10px;
+  margin:0 auto
+}
+.ziti{
+  font-color:black;
+  font-size:14px;
+  font-family:楷体;
+  margin-left:20px;
+  margin-right:10px;
+}
+.kuang2{
+  background-color:white;
+  border-radius: 40rpx;
+  margin-top:10px;
+  margin-left:10px;
+  margin-right:10px;
+  height:27px
+}

@@ -1,0 +1,8 @@
+<block wx:for="{{panduan}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+  <view bindtap='judge_jieguo' data-postjieguo="{{test.panduan}}" >
+    {{test.panduan}}
+   </view>
+
+</block>
+
+

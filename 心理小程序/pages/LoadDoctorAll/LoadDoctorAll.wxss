@@ -1,0 +1,41 @@
+
+.tuxiang{
+  margin: 0 auto;  
+  display: flex;
+  justify-content: center;
+  margin-top:0px;
+  overflow: hidden;
+  width: 161rpx;
+  height: 161rpx;
+  border-radius: 50%;
+}
+.jieshao{
+  color:white;
+  font-family:微软雅黑;
+  justify-content: center;
+  margin: 0 auto;  
+  display: flex;
+  margin-top:10px;
+  
+}
+.jieshao1{
+  color:white;
+  font-family:微软雅黑;
+  justify-content: center;
+  margin: 0 auto;  
+  display: flex;
+  margin-top:0px
+}
+.content{
+  background-color: white;
+  margin-top:10px;
+
+}
+.introduction{
+  font-family: 微软雅黑;
+  justify-content: center;
+  margin: 0 auto;  
+  display: flex;
+  margin-top:10px;
+  font-weight:700;
+}

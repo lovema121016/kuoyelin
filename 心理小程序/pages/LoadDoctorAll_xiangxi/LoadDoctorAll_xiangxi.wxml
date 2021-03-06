@@ -1,0 +1,26 @@
+<!--pages/title/title.wxml-->
+<view style='margin-top:5px'>
+  <image src='https://www.kuoyelindc.com/kuoyelin/img/{{doctor_card_image}}' style='width:70px;height:70px;float:left'></image>
+  <text style='font-size:16px;font-family:微软雅黑;float:left;width:74%;font-weight:500'>{{doctor_h_title}}</text>
+  <text style='font-size:12px;font-family:微软雅黑;float:left;width:74%;'>咨询费用：{{doctor_h_fee}}</text>
+</view>
+<view style='float:left;margin-top:20px'>
+<text style='font-family:微软雅黑;'>话题简介</text>
+<text decode='{{true}}'style="font-size:12px">
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{doctor_h_introduction}}
+
+</text>
+<text style='font-family:微软雅黑'>咨询内容</text>
+<text decode='{{true}}'style="font-size:12px">
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{doctor_h_content}}
+
+
+
+
+
+</text>
+</view>

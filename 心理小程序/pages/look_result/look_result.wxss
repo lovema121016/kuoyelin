@@ -1,0 +1,17 @@
+.totle{
+  background-color: lightcyan;
+   height: 100%;/*生效*/
+   position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.kuangjia{
+  margin-top:20px;
+  width:90%;
+  background-color:#fff;
+  border-radius:5px;
+   margin:20px auto;
+   border: 2px solid #f8df0052;
+}

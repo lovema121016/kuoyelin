@@ -1,0 +1,44 @@
+<!--历史测试记录 -->
+<view class="totle">
+  <view class="mod-a mt20">
+
+    <view class="mod t-sign-time">
+      <text class="key">已完成测试</text>
+    </view>
+  </view>
+  <!--判断是否有历史测试 -->
+  <block wx:for="{{lishiceshi}}" wx:for-item="text" wx:key="this" wx:for-index="i">
+    <view wx:if="{{text.lishiceshi.length==0}}">
+      <view class="txtitem">
+        <text class="t28rpx">暂无测试</text>
+      </view>
+    </view>
+    <!--存在历史测试，显示 -->
+    <view wx:if="{{text.lishiceshi.length>0}}">
+
+      <block wx:for="{{text.lishiceshi}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+        <!--测试题类别 -->
+        <view class="mod-a mt20">
+          <view class="leixing">类型：{{test.lishitimu_type}}</view>
+          <!--测试题名称 -->
+          <view class="nav_left">
+            <view style="height:70px;" class="title">名称：{{test.lishitimu}}</view>
+
+          </view>
+          <!--测试题图片 -->
+          <image class="nav_right" style="width:78px;height:70px" mode="aspectFit " src="http://localhost:8080/kuoyelin/img/{{test.lishiceshi_image}}"></image>
+          <view style="height:10px"></view>
+          <!--分割线 -->
+          <view class="divLine"></view>
+          <!--查看测试结果 -->
+          <view>
+            <navigator url="../look_result/look_result?lishijieguo={{test.lishijieguo}}&lishitimu={{test.lishitimu}}" class="askBtn">测试结果</navigator>
+          </view>
+
+        </view>
+
+      </block>
+
+    </view>
+  </block>
+</view>

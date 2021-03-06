@@ -1,0 +1,18 @@
+<!-- 测试结果显示 -->
+<!-- 显示背景图片 -->
+<view class="totle" style="background-image: url('http://localhost:8080/kuoyelin/img/back8.jpg')">
+  <block wx:for="{{panduan}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+    <!-- 显示题目标题 -->
+    <view class="kuangjia">
+      {{test.timu_name}}
+    </view>
+    <!-- 显示该套题图片 -->
+    <view class="kuangjia">
+      <image src="http://localhost:8080/kuoyelin/img/{{test.timu_image}}"></image>
+    </view>
+    <view class="kuangjia" bindtap='judge_jieguo' data-postjieguo="{{test.panduan}}">
+      <!-- 显示测试结果 -->
+      {{test.panduan}}
+    </view>
+  </block>
+</view>

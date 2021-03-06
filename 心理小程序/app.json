@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/LoadExam/LoadExam",
+    "pages/ceshi/ceshi",
+    "pages/result/result",
+    "pages/suggestion/suggestion",
+    "pages/look_result/look_result",
+    "pages/search/search",
+    "pages/LoadArticle/LoadArticle",
+    "pages/LoadDoctor/LoadDoctor",
+    "pages/me/me",
+    "pages/LoadDoctorAll/LoadDoctorAll",
+    "pages/LoadArticleAll/LoadArticleAll",
+    "pages/LoadVolunteer/LoadVolunteer",
+    "pages/user_yuyue/user_yuyue",
+    "pages/LoadDoctorAll_xiangxi/LoadDoctorAll_xiangxi",
+    "pages/introduction/introduction",
+    "pages/introduction1/introduction1"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00CACA",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "black",
+    "backgroundColor": "#F5F5F5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/shouye1.png"
+      },
+      {
+        "pagePath": "pages/LoadVolunteer/LoadVolunteer",
+        "text": "志愿者",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/shouye1.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/wode.png",
+        "selectedIconPath": "images/wode1.png"
+      }
+    ]
+  }
+}

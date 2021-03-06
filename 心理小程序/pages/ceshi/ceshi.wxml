@@ -1,0 +1,52 @@
+<block wx:for="{{result}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+  <!-- 获取测试题名称 -->
+  <view class="title" style="height:30px">{{title}}</view>
+  <view style="height:20px"></view>
+
+  <!-- 显示当测已测进度 -->
+  <view class="page__title">{{num}}/{{test.result.length}} {{test.result[num-1].title}}</view>
+  <view class="page">
+    <!-- 图片判断：没有图片 -->
+    <view wx:if="{{test.result[num-1].image=='null'}}">
+      <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+          <!-- 获取改套题题目数量-->
+          <radio-group class="radio-group" bindchange="radioChange" data-postlength="{{test.result.length}}">
+            <!-- 题目选项-->
+            <view class="radio-h" wx:for='{{test.result[num-1].content}}' wx:if='{{index % 2 == 0}}'>
+              <!-- 圆形选择按钮 -->
+              <radio value="{{test.result[num-1].content[index + 1]}}" checked="{{test.result[num-1].checked}}" />
+              <view class="nav_right">{{item}}</view>
+
+            </view>
+          </radio-group>
+
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page">
+
+    <view wx:if="{{test.result[num-1].image!='null'}}">
+      <!-- 获取每一小题的图片 -->
+      <image class='page_image' src="http://localhost:8080/kuoyelin/img/{{test.result[num-1].image}}"></image>
+
+      <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+          <!-- 获取改套题题目数量-->
+          <radio-group class="radio-group" bindchange="radioChange" data-postlength="{{test.result.length}}">
+            <!-- 题目选项-->
+            <view class="radio-h" wx:for='{{test.result[num-1].content}}' wx:if='{{index % 2 == 0}}'>
+              <!-- 圆形选择按钮 -->
+              <radio value="{{test.result[num-1].content[index + 1]}}" checked="{{test.result[num-1].checked}}" style='float:left' />
+              <view class="nav_right">{{item}}</view>
+
+            </view>
+          </radio-group>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+</block>

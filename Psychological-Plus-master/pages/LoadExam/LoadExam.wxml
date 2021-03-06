@@ -1,0 +1,33 @@
+
+<view>
+<view >
+   <scroll-view scroll-y="true" scroll-into-view='item2'class="nav_left" style="margin-top:10px">
+ <view class="tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="swichNav">性格</view>
+ <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">健康</view>
+ <view  class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">职场</view>
+  <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">人际</view>
+    <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">能力</view>
+   
+</scroll-view>
+</view>
+<view class="nav_right">
+<swiper   clfoass="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx;previous-margin:10px"   vertical="true">
+    <swiper-item wx:for="{{type}}" wx:for-item="lei" >
+    
+        <block wx:for="{{lei.lei}}" wx:for-item="cell" wx:key="*this">
+          <view class="item-ans">
+          
+            <view class="expertInfo">
+              <view class="name">{{cell.name}}</view>   
+              <view class="nametext">已有{{cell.ceshinum}}人测试</view>
+            </view>
+            <view bindtap='ceshiChuanzhi' data-postid="{{cell.id}}">
+            <navigator url="../ceshi/ceshi?id={{cell.id}}&title={{cell.name}}" class="askBtn">测试</navigator>
+            </view>
+          </view>
+        </block>
+    
+    </swiper-item>
+  </swiper>
+</view>
+</view>

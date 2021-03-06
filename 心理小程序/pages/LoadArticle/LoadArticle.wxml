@@ -1,0 +1,17 @@
+<view style='margin-top:10px'>
+  <label style='font-family:楷体'>主题.阅读</label>
+  <block wx:for="{{article_all}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+    <block wx:for="{{test.article_all}}" wx:for-item="te" wx:key="this" wx:for-index="i">
+      <view style='margin-top:5px'>
+       <view data-id="{{te.article_id}}" data-name="{{te.article_id}}" bindtap="click_ArticleAll">
+        <button style='width:100%'>
+          <text style='font-size:14px;float:left;width:60%;'>
+           标题:{{te.article_title}}
+        </text>
+           <image src="https://www.kuoyelindc.com/kuoyelin/img/{{te.article_image}}" style='float:right;width:35%;margin-top:20px;height:70px;mode:scaleToFill;'></image>
+        </button>
+        </view>
+      </view>
+    </block>
+  </block>
+</view>

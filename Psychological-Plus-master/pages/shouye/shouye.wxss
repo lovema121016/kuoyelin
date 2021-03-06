@@ -1,0 +1,251 @@
+.index{
+  width:93%;
+  height: 100%;
+  margin-top: 10px;
+  margin-left: 10px
+}
+.function{
+  width:100%;
+  height:72px;
+  margin-top: 10px;
+  
+}
+.tubiao1{
+  width: 70px;
+  height: 70px;
+  border-radius: 60rpx;
+  margin-left: 10px;
+  float: left;
+
+}
+.tubiao2{
+  width: 70px;
+  height: 70px;
+  border-radius: 60rpx;
+  margin-left: 44px;
+  float: left;
+}
+.tubiao3{
+  width: 70px;
+  height: 70px;
+  border-radius: 60rpx;
+  margin-right: 10px;
+  float: right;
+}
+.tubiao4{
+  width: 70px;
+  height: 70px;
+  border-radius: 60rpx;
+  margin-left: 10px;
+  float: left
+}
+.tubiao5{
+  width: 70px;
+  height: 70px;
+  border-radius: 60rpx;
+  margin-left: 44px;
+  float: left;
+}
+.tubiao6{
+  width: 70px;
+  height: 70px;
+  border-radius: 60rpx;
+  margin-right: 10px;
+  float: right;
+}
+.yishi{
+  width: 100%;
+  height: 96px;
+}
+.doctor{
+  width:42%;
+  height: 150px;
+  float: left;
+}
+.introduction{
+  float: left;
+  font-size:12px;
+  margin-top: 0px;
+  width: 56%
+}
+.navbar{
+  flex: none;
+  display: flex;
+  background: #fff;
+}
+.navbar .item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 80rpx;
+}
+.navbar .item.active{
+  color: #FFCC00;
+}
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: #FFCC00;
+}
+.joinus{
+  border-radius: 80rpx;
+  width:60px;
+  height:60px;
+  margin-top:30px;
+  background-color: coral;
+  font-size: 12px;
+  margin:0 auto;
+  
+}
+.amountBg{
+  height:100px;
+  background-color:#5495E6;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+
+.img{
+  padding-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   color:#ffffff;
+}
+
+.account{
+  width:35%;
+  color:#ffffff;
+  margin-left:10px;
+}
+
+.nav{
+  width:15px;
+  color:#ffffff;
+}
+
+.lala{
+  background-color:#ffffff;
+  display:flex;
+  flex-direction:row;
+  height:50px;
+  align-items:center;
+}
+
+.icon{
+  width:50px;
+  text-align:center;
+}
+
+.itemname{
+  width:40%;
+  font-size:18px;
+  font-weight:bold;
+}
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+  margin-bottom: 2rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+page{
+  background: #f5f5f5;
+}
+.tab-h{
+    box-sizing: border-box;overflow: hidden;line-height: 80rpx;background: #E1636F; font-size: 16px; white-space: nowrap;position: fixed;top: 0; left: 0; z-index: 99;}
+
+.nav_left .tab-item{
+
+  margin:0 36rpx;
+  display:  inline-block;
+
+   height: 30px;
+  /*垂直居中*/
+  line-height: 30px;
+  /*再设上下padding增加高度，总高42px*/
+  padding: 6px 0;
+  /*只设下边线*/
+  border-bottom: 1px solid #dedede;
+  /*文字14px*/
+  font-size: 20px;
+  }
+
+.nav_left .tab-item.active{color: #4675F9;position: relative;}
+
+.nav_left .tab-item.active:after{ content: "";display: block;height: 8rpx;width: 52rpx;background: #4675F9;position: absolute; bottom: 0;left: 5rpx;border-radius: 16rpx;}
+.item-ans{ width: 100%;display: flex; flex-grow: row no-wrap;justify-content: space-between; padding: 30rpx;box-sizing: border-box; height: 180rpx;align-items: center;border-bottom: 1px solid #F2F2F2;}
+.avatar{width: 100rpx;height: 100rpx;position: relative;padding-right: 30rpx;}
+.avatar .img{width: 100%;height: 100%;}
+.avatar .doyen{width: 40rpx;height: 40rpx;position: absolute;bottom: -2px;right: 20rpx;}
+.expertInfo{font-size: 12px;flex-grow: 2;color: #B0B0B0;line-height: 1.5em;}
+.expertInfo .name{font-size: 16px;color:#000;margin-bottom: 6px;}
+.askBtn{ width: 120rpx;height: 60rpx;line-height: 60rpx;text-align: center;font-size: 14px; border-radius: 60rpx;border: 1px solid #4675F9; color:#4675F9;}
+.tab-content{margin-top: 80rpx;}
+
+/*总体主盒子*/
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #939393;
+}
+
+.nav_left{
+  /*设置行内块级元素（没使用定位）*/
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+  /*主盒子设置背景色为灰色*/
+  background: #f5f5f5;
+  text-align: center;
+}
+
+ 
+/*右侧栏主盒子*/
+.nav_right{
+  /*右侧盒子使用了绝对定位*/
+  position: absolute;
+  top: 0;
+  right: 0;
+  flex: 1;
+  /*宽度75%，高度占满，并使用百分比布局*/
+  width: 75%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+/*右侧栏list的item*/
+.nav_right .nav_right_items{
+  /*浮动向左*/
+  float: left;
+  /*每个item设置宽度是33.33%*/
+  width: 33.33%;
+  height: 80px;
+  text-align: center;
+}
+.nav_right .nav_right_items image{
+  /*被图片设置宽高*/
+  width: 50px;
+  height: 30px;
+}
+.nav_right .nav_right_items text{
+  /*给text设成块级元素*/
+  display: block;
+  margin-top: 5px;
+  font-size: 10px;
+  /*设置文字溢出部分为...*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+

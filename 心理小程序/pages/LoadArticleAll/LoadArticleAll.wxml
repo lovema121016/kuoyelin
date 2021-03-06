@@ -1,0 +1,24 @@
+<view style='margin-top:10px'>
+  <label style='font-family:楷体'>文章详情</label>
+  <block wx:for="{{article_all}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+    <block wx:for="{{test.article_all}}" wx:for-item="te" wx:key="this" wx:for-index="i">
+      <view style='margin-top:5px'>
+        <button style='height:autoplay'>
+          <image src="https://www.kuoyelindc.com/kuoyelin/img/{{te.article_image}}" style='float:right;mode:aspectFill'></image>
+          <label style='float:left;font-size:16px;font-family:微软雅黑;'>
+            {{te.article_title}}
+          </label>
+          <label style='color:gray;float:left;font-size:16px;font-family:微软雅黑;'>
+            类型:{{te.article_type}}
+          </label>
+          <label style='color:gray;float:left;font-size:16px;font-family:微软雅黑;'>
+            作者:{{te.article_author}}
+          </label>
+          <label style='float:left;font-size:16px;font-family:微软雅黑;'>
+            {{te.article_content}}
+          </label>
+        </button>
+      </view>
+    </block>
+  </block>
+</view>

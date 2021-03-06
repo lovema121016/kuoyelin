@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<!--首页1-->
+<view hidden="{{currentTab!==0}}"> 
+<view style='background-color:#F0F0F0;height:1000px;'>
+<swiper indicator-dots="{{indicatorDots}}" 
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true"> 
+      <block wx:for="{{arr}}"> 
+        <swiper-item> 
+            <image src="{{item}}" class="index"></image> 
+        </swiper-item> 
+      </block> 
+</swiper> 
+<view style='background-color:white;border-radius: 40rpx;margin-top:10px;margin-left:10px;margin-right:10px;height:27px'>
+<text style='font-color:black;font-size:14px;font-family:楷体;margin-left:20px;margin-right:10px;'>跟严文华学树木人格图，读懂内心的世界</text>
+</view>
+<view style="height:200px;background-color:white;">
+<view class="function">
+   <button class="tubiao1" bindtap='LoadExam' style="background-image: url('../../images/xinlizixun.jpg');background-size:cover"></button>
+    <button class="tubiao2" bindtap='prevention' style="background-image: url('../../images/心理健康教育.png');background-size:cover"></button>
+    <button class="tubiao3"bindtap='test' style="background-image: url('../../images/心理.png');background-size:cover"></button>
+</view>
+<view>
+    <text style='font-size:13px;margin-left:17px'decode="{{true}}">&emsp;性&emsp;格&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&ensp;健&emsp;康&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&emsp;人&emsp;际</text>
+</view>
+<view class="function"style="margin-top:15px">
+    <button class="tubiao4"style="background-image: url('../../images/V2.0心理咨询.png');background-size:cover"></button>
+    <button class="tubiao5"style="background-image: url('../../images/心理咨询.png');background-size:cover"></button>
+    <button class="tubiao6"style="background-image: url('../../images/volunteer.png');background-size:cover"></button>
+</view>
+<view>
+    <text style='font-size:13px;margin-left:17px'decode="{{true}}">&emsp;职&emsp;场&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&ensp;能&emsp;力&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&emsp;爱&emsp;情</text>
+</view>
+</view>
+
+</view>
+</view>

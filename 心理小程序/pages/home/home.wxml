@@ -1,0 +1,115 @@
+<!--首页-->
+
+<!--搜索 开始-->
+<view class="user-section">
+  <image class="user_headimg" src="{{userInfo.avatarUrl}}"></image>
+  <navigator url="../search/search">
+    <view style='float: right;margin-right: .3rem;width: 1.6rem; height: 1.6rem; background: url("https://www.kuoyelindc.com/kuoyelin/img/search.png") center no-repeat; background-size: 18px;cursor: pointer;'></view>
+  </navigator>
+  <view class="user_hello">
+    <text>欢迎, {{userInfo.nickName}}{{date}}</text>
+  </view>
+</view>
+
+<!--搜索结束-->
+<!--滑动图片开始-->
+<view class="user_img_top">
+  <swiper class="banner-box" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image bindtap="goToDetail" src="{{item}}" class="slide-image" width="100%" height="100%" url="../search/index" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<!--滑动图片结束-->
+
+<!--首页1-->
+<view hidden="{{currentTab!==0}}">
+  <view style='background-color:#F0F0F0;height:autoplay;'>
+    <view class="kuang2">
+      <text class="ziti">跟严文华学树木人格图，读懂内心的世界</text>
+    </view>
+
+    <!--热门测试内容-->
+    <view style='width:100%;'>
+      <label style='margin-top:10px;font-family:楷体;color:red;width:70px;'>热门测试</label>
+
+      <navigator url="../LoadExam/LoadExam" class='askBtn'>更多测试></navigator>
+
+    </view>
+    <block wx:for="{{high_test_jieguo}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+      <block wx:for="{{test.high_test_jieguo}}" wx:for-item="text" wx:key="this" wx:for-index="i">
+        <view style='margin-top:6px'>
+          <text decode="{{true}}"> 
+    </text>
+        </view>
+        <view class="kuangjia">
+
+          <view class="title1" data-id="{{text.high_test_id}}" data-name="{{text.high_test_name}}" bindtap="click_ceshi">{{text.high_test_name}}</view>
+
+          <view class="type1" data-id="{{text.high_test_id}}" data-name="{{text.high_test_name}}" bindtap="click_ceshi">
+            <text style='color:gray'>类型：</text>{{text.high_test_type}}</view>
+          <view data-id="{{text.high_test_id}}" data-name="{{text.high_test_name}}" bindtap="click_ceshi">
+            <image class="image1" src="https://www.kuoyelindc.com/kuoyelin/img/{{text.high_test_image}}"></image>
+          </view>
+        </view>
+      </block>
+    </block>
+
+    <view style='margin-top:10px'>
+      <label style='font-family:楷体'>主题.阅读</label>
+      <navigator url="../LoadArticle/LoadArticle" class="askBtn">更多文章></navigator>
+      <block wx:for="{{high_test_jieguo}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+        <block wx:for="{{test.article}}" wx:for-item="te" wx:key="this" wx:for-index="i">
+          <view style='margin-top:5px;'>
+            <view data-id="{{te.article_id}}" data-name="{{te.article_id}}" bindtap="click_ArticleAll">
+              <button style='width:100%'>
+
+                <text style='font-size:14px;float:left;width:60%;'>
+        {{te.article_title}}
+        </text>
+             
+
+                <image src="https://www.kuoyelindc.com/kuoyelin/img/{{te.article_image}}" style='float:right;width:35%;margin-top:20px;height:70px;mode:scaleToFill;'></image>
+
+              </button>
+            </view>
+          </view>
+        </block>
+      </block>
+    </view>
+    <view>
+      <view bindtap='click_LoadDoctor'>
+        <image class='yishi' src="https://www.kuoyelindc.com/kuoyelin/img/yishi.png"></image>
+      </view>
+
+      <block wx:for="{{high_test_jieguo}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+        <block wx:for="{{test.doctor_information}}" wx:for-item="tes" wx:key="this" wx:for-index="i">
+          <view style='height:180px; margin-top:10px;background-color:white;'>
+            <view data-id="{{tes.doctor_id}}" data-name="{{tes.doctor_id}}" bindtap="click_DoctorAll">
+              <image class='doctor' src="https://www.kuoyelindc.com/kuoyelin/img/{{tes.doctor_card_image}}"></image>
+
+              <text class='introduction'>
+               姓名：{{tes.doctor_name}}
+            </text>
+              <text class='introduction'>
+               职称: {{tes.doctor_professional_rank}}
+            </text>
+              <text class='introduction'>
+              {{tes.doctor_h_title}}
+            </text>
+
+            </view>
+          </view>
+        </block>
+      </block>
+
+
+    </view>
+
+
+
+  </view>
+  <!--热门测试内容结束-->
+</view>

@@ -1,0 +1,32 @@
+    <view>
+      <view bindtap='click_LoadDoctor'>
+        <image class='yishi' src="https://www.kuoyelindc.com/kuoyelin/img/yishi.png"></image>
+      </view>
+
+      <block wx:for="{{doctor_all}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+        <block wx:for="{{test.doctor_all}}" wx:for-item="tes" wx:key="this" wx:for-index="i">
+          <view style='height:180px; margin-top:10px;background-color:white;'>
+            <view data-id="{{tes.doctor_id}}" data-name="{{tes.doctor_id}}" bindtap="click_DoctorAll">
+              <image class='doctor' src="https://www.kuoyelindc.com/kuoyelin/img/{{tes.doctor_card_image}}"></image>
+
+              <text class='introduction'>
+               姓名：{{tes.doctor_name}}
+            </text>
+              <text class='introduction'>
+               职称: {{tes.doctor_professional_rank}}
+            </text>
+              <text class='introduction'>
+              {{tes.doctor_h_title}}
+            </text>
+
+            </view>
+          </view>
+        </block>
+      </block>
+
+
+    </view>
+
+
+
+

@@ -1,0 +1,44 @@
+<!--pages/doctor/doctor.wxml-->
+<view style='background-color:#F0F0F0;height:1000px'>
+
+  <view style="width:100%;height:180px;background-image:url('../../images/背景图片.jpg');background-size:cover">
+    <block wx:for="{{doctor_all}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+      <block wx:for="{{test.doctor_all}}" wx:for-item="tes" wx:key="this" wx:for-index="i">
+        <image src='https://www.kuoyelindc.com/kuoyelin/img/{{tes.doctor_card_image}}' class='tuxiang'>
+        </image>
+        <text class='jieshao'>{{tes.doctor_doctor_name}}</text>
+        <text class='jieshao' style="font-size:12px" decode="{{true}}">{{tes.doctor_professional_rank}}</text>
+        <text class='jieshao' style="font-size:12px" decode="{{true}}">&ensp;&ensp;&ensp;&ensp;&ensp;{{tes.doctor_work_year}}&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;{{tes.doctor_enter_time}}</text>
+        <text class='jieshao1' style="font-size:11px" decode="{{true}}">从业年限&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;入驻时间</text>
+
+        <view style='background-color:white;height:150px;border-radius:20px'>
+          <image src='../../images/title.png' style='width:20px;height:20px;margin-top:20px;float:left'></image>
+          <text style='font-family:微软雅黑;float:left'>  
+      擅长话题
+      </text>
+          <navigator url='../LoadDoctorAll_xiangxi/LoadDoctorAll_xiangxi?doctor_card_image={{tes.doctor_card_image}}&doctor_h_content={{tes.doctor_h_content}}&doctor_h_introduction={{tes.doctor_h_introduction}}&doctor_h_fee={{tes.doctor_h_fee}}&doctor_h_title={{tes.doctor_h_title}}'>
+            <text style='margin-top:30px;color:gray;font-size:12px' decode="{{true}}">
+
+
+           {{tes.doctor_h_title}}&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;>
+        </text>
+          </navigator>
+        </view>
+        <view style='width:100%;height:autoplay;background-color:white;margin-top:10px'>
+          <image src='../../images/field.png' style='width:20px;height:20px;margin-top:20px;float:left'></image>
+          <text style='font-family:微软雅黑;float:left'>  
+         擅长领域
+        </text>
+          <text style='margin-top:30px;color:gray;font-size:12px' decode="{{true}}">
+
+           {{tes.doctor_h_content}}
+        </text>
+        </view>
+          <view bindtap='click_yuyue' data-id="{{tes.doctor_id}}">
+            <button>立即预约</button>
+          </view>
+        
+      </block>
+    </block>
+  </view>
+</view>

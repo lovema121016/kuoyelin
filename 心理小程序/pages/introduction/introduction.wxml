@@ -1,0 +1,7 @@
+<!--pages/introduction/introduction.wxml-->
+<view >
+<text style='font-famile:楷体；font-size:10px;'>
+咨询师申请请移步阔叶林心理后台管理系统
+网址：https://www.kuoyelindc.com/kuoyelin/index.jsp
+</text>
+</view>

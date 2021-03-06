@@ -1,0 +1,33 @@
+<!--搜索页面 -->
+<view class="search-pancel">
+  <!--根据标题关键字搜索 -->
+  <input bindinput="SearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" name="input" confirm-type="search" class="search-input" placeholder="请输入试题关键字..."></input>
+  <button bindtap="Search" class="search-button" form-type="submit" size="mini" plain="true">
+    <icon type="search" color="#959595" size="18" />
+  </button>
+</view>
+<!--遍历显示搜索结果 -->
+<block wx:for="{{search_result}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+  <view wx:if="{{test.search_result.length==0}}">
+    <view>暂无结果</view>
+  </view>
+  <view wx:if="{{test.search_result.length!=0}}">
+    <block wx:for="{{test.search_result}}" wx:for-item="text" wx:key="this" wx:for-index="i">
+      <view style='margin-top:6px'>
+        <text decode="{{true}}"> 
+    </text>
+      </view>
+      <view class="kuangjia">
+
+        <view class="title1" data-id="{{text.id}}" data-name="{{text.name}}" bindtap="click_ceshi">{{text.name}}</view>
+
+        <view class="type1" data-id="{{text.id}}" data-name="{{text.name}}" bindtap="click_ceshi">
+          <text style='color:gray'>类型：</text>{{text.type}}</view>
+        <view data-id="{{text.id}}" data-name="{{text.name}}" bindtap="click_ceshi">
+          <image class="image1" src="http://localhost:8080/kuoyelin/img/{{text.image}}"></image>
+        </view>
+      </view>
+
+    </block>
+  </view>
+</block>

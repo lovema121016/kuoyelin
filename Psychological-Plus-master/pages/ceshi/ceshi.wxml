@@ -1,0 +1,46 @@
+
+<block wx:for="{{result}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+<view class="title" style="height:30px">{{title}}</view>
+<view style="height:20px"></view>
+<view class="page">
+  <view class='page__hd'>
+
+    <view class="page__title"  >{{num}}/{{test.result.length}} {{test.result[num-1].title}}</view>
+   <view wx:if="{{test.result[num-1].image==null}}">
+ <view class="page__bd">
+     <view class="weui-cells weui-cells_after-title">
+       <radio-group class="radio-group" bindchange="radioChange" data-postlength="{{test.result.length}}">  
+        <view class="radio-h" wx:for='{{test.result[num-1].content}}'  wx:if='{{index % 2 == 0}}' >
+      
+           <radio   value="{{test.result[num-1].content[index + 1]}}" checked="{{test.result[num-1].checked}}" />
+          <view class="nav_right">{{item}}</view>
+      
+        </view>    
+       </radio-group>
+                       
+    </view>   
+  </view>
+   </view>
+   </view>
+   </view>
+   <view class="page">
+   <view wx:if="{{test.result[num-1].image!=null}}">
+     <image class="page__image" src="http://localhost:8080/kuoyelin/img/{{test.result[num-1].image}}"></image>
+  
+  <view class="page__bd">
+     <view class="weui-cells weui-cells_after-title">
+       <radio-group class="radio-group" bindchange="radioChange" data-postlength="{{test.result.length}}">  
+        <view class="radio-h" wx:for='{{test.result[num-1].content}}'  wx:if='{{index % 2 == 0}}' >
+      
+           <radio   value="{{test.result[num-1].content[index + 1]}}" checked="{{test.result[num-1].checked}}" />
+          <view class="nav_right">{{item}}</view>
+      
+        </view>    
+       </radio-group>
+                       
+    </view>   
+  </view>
+</view>
+</view>
+
+</block>

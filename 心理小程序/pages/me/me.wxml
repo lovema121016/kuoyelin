@@ -1,0 +1,56 @@
+<!--index.wxml-->
+
+
+
+<!--我的-->
+<view >
+  <view class="amountBg" >
+  <view class="account">
+ <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" ></image>    
+  </view>
+  <view class="img">
+  <view>{{userInfo.nickName}}</view>
+  </view> 
+   <view class="nav"></view>
+</view>
+
+  <view class="lala" style="height:40px">
+  <view class="icon"><image src="../../images/zixun.png"style="width:22px;height:21px;"></image></view>
+   <view class="itemname">
+    <navigator url="../../pages/user_yuyue/user_yuyue">
+     <view>我的预约</view>
+   </navigator>
+   </view>
+  </view>
+
+<view class="lala">
+<view class="icon"><image src="../../images/ceshi.png"style="width:22px;height:21px;"></image></view>
+  <view class="itemname">
+   <navigator url="../../pages/suggestion/suggestion">
+     <view>我的测试</view>
+   </navigator>
+  </view>
+</view>
+
+
+
+ <view class="lala">
+  <view class="icon"><image src="../../images/zhuanjia.png"style="width:22px;height:21px;"></image></view>
+   <view class="itemname">
+     <navigator url="../../pages/introduction/introduction">
+     <view>专家入驻</view>
+   </navigator>
+   </view>
+  </view>
+
+ <view class="lala">
+  <view class="icon"><image src="../../images/zhiyuan.png"style="width:22px;height:21px;"></image></view>
+   <view class="itemname">
+     <navigator url="../../pages/introduction1/introduction1">
+     <view>志愿者申请</view>
+   </navigator>
+   </view>
+  </view>
+
+
+</view>

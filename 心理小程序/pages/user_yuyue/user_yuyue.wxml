@@ -1,0 +1,25 @@
+<view>
+  <image class='yishi' src="https://www.kuoyelindc.com/kuoyelin/img/yishi.png"></image>
+
+  <view style='height:160px; background-color:white;'>
+    <block wx:for="{{lishiyuyue}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+      <block wx:for="{{test.lishiyuyue}}" wx:for-item="tes" wx:key="this" wx:for-index="i">
+
+        <view data-id="{{tes.lishi_doctor_id}}" data-name="{{tes.lishi_doctor_id}}" bindtap="click_DoctorAll">
+          <image class='doctor' src="https://www.kuoyelindc.com/kuoyelin/img/{{tes.lishi_doctor_card_image}}"></image>
+          <text class='introduction'>
+               姓名：{{tes.lishi_doctor_name}}
+            </text>
+          <text class='introduction'>
+               职称: {{tes.lishi_doctor_professional_rank}}
+            </text>
+          <text class='introduction'>
+              {{tes.lishi_doctor_h_title}}
+            </text>
+
+        </view>
+      </block>
+    </block>
+  </view>
+
+</view>

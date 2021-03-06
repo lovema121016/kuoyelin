@@ -1,0 +1,41 @@
+.radio-h{
+   border: 1.5px solid #00CACA;
+   border-style:ridge; 
+   border-radius: 5px;
+    margin:13rpx 36rpx;
+    height: 100%;
+   position: relative;
+}
+.radio-h.radio{
+ display: inline-block;
+  width: 20%;
+  height: 100%;
+  /*主盒子设置背景色为灰色*/
+  
+  text-align: center;
+
+}
+ 
+/*右侧栏主盒子*/
+.radio-h.nav_right{
+  /*右侧盒子使用了绝对定位*/
+position: relative;
+  /*宽度75%，高度占满，并使用百分比布局*/
+  width: 70%;
+ height: 100%;
+  text-align: right;
+  background: #fff;
+}
+.title{
+  font-size: 50rpx;
+
+font-family: 楷体;
+
+}
+.page_image{
+
+ display:flex;                 
+ justify-content: center;
+margin: auto; 
+}
+

@@ -1,0 +1,58 @@
+<!--index.wxml-->
+
+<!--搜索 开始-->
+	<view class="user-section">
+        <image class="user_headimg" src="{{userInfo.avatarUrl}}"></image>
+        <navigator url="../search/search">
+            <view style='float: right;margin-right: .3rem;width: 1.6rem; height: 1.6rem; background: url("../../images/search.png") center no-repeat; background-size: 18px;cursor: pointer;' ></view>
+        </navigator>
+        <view class="user_hello">
+            <text>欢迎, {{userInfo.nickName}}{{date}}</text>
+        </view>      
+    </view>
+
+<!--搜索结束-->
+<!--滑动图片开始-->
+<view class="user_img_top">
+	<swiper class="banner-box" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+            <block wx:for="{{imgUrls}}" wx:key="unique">
+                <swiper-item>
+                    <image bindtap="goToDetail" src="{{item}}" class="slide-image" width="100%" height="100%"  url="../search/index" />
+                </swiper-item>
+            </block>
+        </swiper>
+</view>
+<!--滑动图片结束-->
+
+<!--首页1-->
+<view hidden="{{currentTab!==0}}"> 
+<view style='background-color:#F0F0F0;height:1000px;'>
+<view class="kuang2">
+<text class="ziti">跟严文华学树木人格图，读懂内心的世界</text>
+</view>
+
+<!--热门测试内容-->
+<view style='margin-top:10px;font-family:楷体;color:red;'>热门测试</view>
+
+
+  <block wx:for="{{high_test_jieguo}}" wx:for-item="test" wx:key="this" wx:for-index="i">
+  <block wx:for="{{test.high_test_jieguo}}" wx:for-item="text" wx:key="this" wx:for-index="i">
+  <view style='margin-top:6px'>
+    <text decode="{{true}}"> 
+    </text>
+</view>
+<view class="kuangjia">
+
+<view class="title1" data-id="{{text.high_test_id}}" data-name="{{text.high_test_name}}" bindtap="click_ceshi">{{text.high_test_name}}</view>
+
+ <view class="type1" data-id="{{text.high_test_id}}" data-name="{{text.high_test_name}}" bindtap="click_ceshi"><text style='color:gray'>类型：</text>{{text.high_test_type}}</view>
+<view  data-id="{{text.high_test_id}}" data-name="{{text.high_test_name}}" bindtap="click_ceshi">
+  <image class="image1" src="http://localhost:8080/kuoyelin/img/{{text.high_test_image}}"></image>
+  </view>
+  </view>
+  </block>
+  </block>
+</view>
+<!--热门测试内容结束-->
+</view>
+
